@@ -1,8 +1,10 @@
+import { PostHog } from "posthog-node";
+
 export default function() {
 
   const linkClasses = "cursor-pointer text-lg box-border m-0 min-w-0 text-red-600 underline hover:decoration-wavy"
-
   return `
+  
     ${popupModal()}
     ${thanks()}
     <div class="relative flex flex-col w-full" style="height: calc(100vh - 51px); min-height: 600px;">
@@ -13,7 +15,7 @@ export default function() {
         </div>
 
         <div>
-          from 
+          from
           <a
             class="box-border m-0 min-w-0 p-0 px-2 bg-[#ec3750] rounded-lg text-white whitespace-nowrap no-underline"
             href="https://www.hackclub.com">
@@ -22,15 +24,14 @@ export default function() {
         </div>
 
         <div class="text-xl leading-none font-light tracking-normal pt-2.5">
-          Write a program that creates art and we'll send you* a CNC machine that can draw it.
+          <p>Program generative art in javascript. Draw it on a machine by <a href="https://hackclub.com/" target="_blank">Hack Club</a></p>
+          <p>Blot is no longer an active You Ship, We Ship (YSWS) program at Hack Club. Get it from <a href="https://hackclub.com/" target="_blank"><u>High Seas</u></a> instead!</p>
+          
         </div>
 
         <div class="sm:flex-row flex-col flex gap-2">
           <div onclick="window.location.href='/editor?guide=start';" class="text-white w-max text-lg p-1 pl-2.5 pr-2.5 rounded-lg mt-[10px] cursor-pointer bg-[--primary] hover:scale-105 hover:shadow-md transition" style="letter-spacing: 0px;">
             Get started making art!
-          </div>
-          <div onclick="openModal()" class="text-white w-max text-lg p-1 pl-2.5 pr-2.5 rounded-lg mt-[10px] cursor-pointer bg-[#3a3939] hover:scale-105 hover:shadow-md transition" style="letter-spacing: 0px;">
-            Get stickers for free
           </div>
         </div>
 
